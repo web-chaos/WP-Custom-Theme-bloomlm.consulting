@@ -1,0 +1,10 @@
+<article class="blog__item">
+	<div class="blog__item--header single__header">
+		<date><?php echo get_the_date( 'j M Y' ); ?></date>
+		<a href="<?php the_permalink(); ?>"><?php echo get_the_title(); ?></a>
+	</div>
+	<div class="blog__item--footer">
+		<p><?php echo wp_trim_words( get_the_content(), 36, '...' ); ?></p>
+		<a class="button btn-red" href="<?php the_permalink(); ?>"><?php echo esc_html__( 'Read more', 'bloomlm' ); ?></a>
+	</div>
+</article>
